@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SalvaAluno</string>
+    <string name="title_activity_listagem">ListagemActivity</string>
+</resources>
