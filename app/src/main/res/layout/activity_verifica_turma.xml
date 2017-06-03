@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:background="#4444"
     android:layout_margin="20dp"
-    tools:context="com.example.oliveira.salvaaluno.verificaTurma">
+    tools:context="com.example.oliveira.salvaaluno.VerificaTurma">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

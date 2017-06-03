@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".AtividadesActivity" />
-        <activity android:name=".verificaTurma" />
-        <activity android:name=".CadastroAtividades"></activity>
+        <activity android:name=".VerificaTurma" />
+        <activity android:name=".CadastroAtividades" />
+        <activity android:name=".Listagem" />
+        <activity android:name=".Informacao"></activity>
     </application>
 
 </manifest>
