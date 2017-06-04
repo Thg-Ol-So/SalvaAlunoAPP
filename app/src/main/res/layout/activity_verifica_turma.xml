@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:text="Ver"
         android:textSize="30dp"
+        android:onClick="visualizar"
         android:layout_marginTop="40dp"
         />
 </LinearLayout>

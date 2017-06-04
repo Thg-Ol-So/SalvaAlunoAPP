@@ -23,7 +23,7 @@ public class BancoHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table atividades(id integer primary key autoincrement, tipo text, data_hora DATETIME, status text);";
+        String sql = "create table atividades(id integer primary key autoincrement, tipo text, data text, conteudo text);";
         db.execSQL(sql);
     }
 
