@@ -63,15 +63,15 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
         String data         = valor_data;
         String conteudo     = data_conteudo.getEditableText()+"";
         String tipo         = String.valueOf(spinner.getSelectedItem());
-        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-        alerta.setMessage(data);
-        alerta.show();
+        // AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+        // alerta.setMessage(data);
+        // alerta.show();
 
         if(!conteudo.equals("") && !data.equals("")){
             dao.open();
             dao.criar(new AtividadeObj(tipo,data,conteudo));
             dao.close();
-            Intent i = new Intent(CadastroAtividades.this,Listagem.class);
+            Intent i = new Intent(CadastroAtividades.this,Atividades.class);
             startActivity(i);
         }
 
