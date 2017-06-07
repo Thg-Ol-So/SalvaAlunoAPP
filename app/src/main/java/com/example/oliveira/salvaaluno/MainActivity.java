@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
-    @Override
+
+    // OW FRANGO! CODIGO ABAIXO NAO NECESSITA ESTAR NESTA ACTIVITY
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_atividades, menu);
@@ -64,6 +66,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
-
+*/
 
 }

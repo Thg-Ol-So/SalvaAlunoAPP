@@ -52,8 +52,8 @@ public class Atividades extends AppCompatActivity {
 
     }
 
-
-    @Override
+// OW FRANGO! Este Codigo nao necessita nesta Activity!
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_atividades, menu);
@@ -81,6 +81,8 @@ public class Atividades extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
+
     private void toast(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }

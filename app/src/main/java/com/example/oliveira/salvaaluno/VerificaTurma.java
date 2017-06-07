@@ -5,8 +5,11 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class VerificaTurma extends AppCompatActivity {
     EditText turma;
@@ -31,5 +34,29 @@ public class VerificaTurma extends AppCompatActivity {
         startActivity(i);
         onResume();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_atividades, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.acao_sair) {
+            finish();
+            toast("Aplicativo Encerrado");
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void toast(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
