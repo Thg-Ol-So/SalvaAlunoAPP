@@ -5,6 +5,7 @@ package com.example.oliveira.salvaaluno;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,20 +24,21 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CadastroAtividades extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener,DialogInterface.OnCancelListener{
+public class CadastroAtividades extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, DialogInterface.OnCancelListener {
     private TextView texto_data;
     private Button botao_data;
     private String valor_data = "";
     private EditText data_conteudo;
-    private int ano, mes, dia, horas,minutos;
+    private int ano, mes, dia, horas, minutos;
     private Spinner spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_atividades);
-        texto_data      = (TextView) findViewById(R.id.text_data);
-        botao_data      = (Button)   findViewById(R.id.botao_data);
-        data_conteudo   = (EditText) findViewById(R.id.conteudo);
+        texto_data = (TextView) findViewById(R.id.text_data);
+        botao_data = (Button) findViewById(R.id.botao_data);
+        data_conteudo = (EditText) findViewById(R.id.conteudo);
         addItemsOnSpinner();
         botao_data.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +46,26 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
                 informaData(v);
             }
         });
+
+
+// (<-) SETA VOLTAR
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+
     public void addItemsOnSpinner() {
 
         spinner = (Spinner) findViewById(R.id.tipoAtividade);
@@ -58,26 +79,26 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
         spinner.setAdapter(dataAdapter);
     }
 
-    public void salvar(View v){
-        AtividadeDAO dao    = new AtividadeDAO(this);
-        String data         = valor_data;
-        String conteudo     = data_conteudo.getEditableText()+"";
-        String tipo         = String.valueOf(spinner.getSelectedItem());
+    public void salvar(View v) {
+        AtividadeDAO dao = new AtividadeDAO(this);
+        String data = valor_data;
+        String conteudo = data_conteudo.getEditableText() + "";
+        String tipo = String.valueOf(spinner.getSelectedItem());
         // AlertDialog.Builder alerta = new AlertDialog.Builder(this);
         // alerta.setMessage(data);
         // alerta.show();
 
-        if(!conteudo.equals("") && !data.equals("")){
+        if (!conteudo.equals("") && !data.equals("")) {
             dao.open();
-            dao.criar(new AtividadeObj(tipo,data,conteudo));
+            dao.criar(new AtividadeObj(tipo, data, conteudo));
             dao.close();
-            Intent i = new Intent(CadastroAtividades.this,Atividades.class);
+            Intent i = new Intent(CadastroAtividades.this, Atividades.class);
             startActivity(i);
         }
 
     }
 
-    public void informaData(View v){
+    public void informaData(View v) {
         iniciarData();
         Calendar now = Calendar.getInstance();
         DatePickerDialog dpd = DatePickerDialog.newInstance(
@@ -88,8 +109,9 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
         );
         dpd.show(getFragmentManager(), "Datepickerdialog");
     }
-    public void iniciarData(){
-        if(ano==0){
+
+    public void iniciarData() {
+        if (ano == 0) {
             Calendar c = Calendar.getInstance();
             ano = c.get(Calendar.YEAR);
             mes = c.get(Calendar.MONTH);
@@ -99,16 +121,17 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
 
         }
     }
+
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        String date = dayOfMonth+"/"+(monthOfYear+1)+"/"+year;
+        String date = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
         texto_data.setText(date);
         valor_data = date;
     }
 
     @Override
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
-        String time = "You picked the following time: "+hourOfDay+"h"+minute+"m"+second;
+        String time = "You picked the following time: " + hourOfDay + "h" + minute + "m" + second;
         //t.setText(time);
 
     }
@@ -118,4 +141,5 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
         ano = mes = dia = minutos = horas = 0;
         texto_data.setText("");
     }
+
 }
