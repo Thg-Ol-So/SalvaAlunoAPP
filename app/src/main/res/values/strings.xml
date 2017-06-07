@@ -4,4 +4,6 @@
     <string name="title_activity_atividades">Atividades</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="sair">Sair</string>
+
 </resources>

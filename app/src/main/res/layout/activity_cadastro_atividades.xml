@@ -78,6 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/conteudo"
+            android:background="@drawable/borda_caixatexto"
+
             />
     <Button
         android:layout_width="match_parent"
