@@ -60,4 +60,38 @@ public class AtividadeDAO {
         }
         return lista;
     }
+    public List<AtividadeObj> getAtividades() {
+        List<AtividadeObj> lista = new ArrayList<>();
+        Cursor cursor = banco.query("atividades", colunas, "tipo='ATIVIDADE'", null, null, null,"id desc", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            AtividadeObj p = new AtividadeObj(cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            lista.add(p);
+            cursor.moveToNext();
+        }
+        return lista;
+    }
+    public List<AtividadeObj> getProvas() {
+        List<AtividadeObj> lista = new ArrayList<>();
+        Cursor cursor = banco.query("atividades", colunas, "tipo='PROVA'", null, null, null,"id desc", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            AtividadeObj p = new AtividadeObj(cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            lista.add(p);
+            cursor.moveToNext();
+        }
+        return lista;
+    }
+    public List<AtividadeObj> getTrabalhos() {
+        List<AtividadeObj> lista = new ArrayList<>();
+        Cursor cursor = banco.query("atividades", colunas, "tipo='TRABALHO'", null, null, null,"id desc", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            AtividadeObj p = new AtividadeObj(cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            lista.add(p);
+            cursor.moveToNext();
+        }
+        return lista;
+    }
 }
+

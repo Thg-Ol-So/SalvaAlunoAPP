@@ -15,7 +15,7 @@ public class Listagem extends AppCompatActivity {
         setContentView(R.layout.activity_listagem);
         AtividadeDAO pdao = new AtividadeDAO (this);
         pdao.open();
-        atividades = pdao.getAll();
+        atividades = pdao.getAtividades();
 
         pdao.close();
         ListAdapter adapter = new ListaAdapter(this,atividades);

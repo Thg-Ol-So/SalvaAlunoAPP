@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:ems="10"
-            android:layout_weight="4"
+            android:layout_weight="8"
             android:id="@+id/botao_data"
             android:background="@android:color/transparent"
             android:text="Agendar Data"

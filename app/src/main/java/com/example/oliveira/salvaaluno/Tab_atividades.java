@@ -23,7 +23,7 @@ public class Tab_atividades extends Fragment {
             List<AtividadeObj> atividades;
             AtividadeDAO pdao = new AtividadeDAO (getContext());
             pdao.open();
-            atividades = pdao.getAll();
+            atividades = pdao.getAtividades();
 
             pdao.close();
             ListAdapter adapter = new ListaAdapter(getContext(),atividades);
