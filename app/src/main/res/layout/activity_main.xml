@@ -67,14 +67,16 @@
         android:textStyle="bold"
 
         />
-    <Button
+
+    <!-- NAO PRECISA UTILIZAR
+        <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="View_sair"
         android:text="Sair"
         android:layout_marginTop="20dp"
         android:textSize="@dimen/mdtp_year_label_text_size"
-        android:textStyle="bold"
+        android:textStyle="bold"/>
+        -->
 
-        />
 </LinearLayout>

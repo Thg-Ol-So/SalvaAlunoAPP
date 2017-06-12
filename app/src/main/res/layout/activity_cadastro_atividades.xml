@@ -73,14 +73,15 @@
             />
 
     </LinearLayout>
-        <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/conteudo"
-            android:background="@drawable/borda_caixatexto"
 
-            />
+    <EditText
+        android:id="@+id/conteudo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borda_caixatexto"
+
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

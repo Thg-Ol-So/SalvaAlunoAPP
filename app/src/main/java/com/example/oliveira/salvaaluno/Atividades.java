@@ -50,38 +50,28 @@ public class Atividades extends AppCompatActivity {
             }
         });
 
+
+        //SETA VOLTAR
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
-// OW FRANGO! Este Codigo nao necessita nesta Activity!
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_atividades, menu);
-        return true;
-    }
-
+    // METODO DA SETA VOLTAR
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        int sair = item.getItemId();
-
-        if (sair == R.id.acao_sair) {
+        if (id == android.R.id.home) {
             finish();
-            toast("Aplicativo Encerrado");
 
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
-    */
+
 
     private void toast(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
