@@ -34,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
-            finish();
+            //finish();
+
+            SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);
+            dados.edit().putString("nome", "").apply();
+            Intent i = new Intent(MainActivity.this,VerificaTurma.class);
+            startActivity(i);
 
             return true;
         }
