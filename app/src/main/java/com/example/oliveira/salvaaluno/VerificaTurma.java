@@ -33,10 +33,6 @@ public class VerificaTurma extends AppCompatActivity {
         String codigo = turma.getEditableText().toString();
         TurmaDAO dao = new TurmaDAO(this);
         dao.open();
-        dao.criar(new Turmas("3212"));
-        dao.criar(new Turmas("3213"));
-        dao.criar(new Turmas("3214"));
-        dao.close();
         try{
             if(dao.getByIdTurma(codigo).getId()>0){
                 SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);

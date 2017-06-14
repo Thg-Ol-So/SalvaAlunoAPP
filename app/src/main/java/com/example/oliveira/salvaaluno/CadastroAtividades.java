@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import Atividades.Atividades;
+import Tab_Atividades.Atividades;
 import DAO.AtividadeDAO;
 import Modelo.AtividadeObj;
 

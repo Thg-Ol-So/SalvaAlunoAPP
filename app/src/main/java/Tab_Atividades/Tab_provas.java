@@ -1,4 +1,4 @@
-package Atividades;
+package Tab_Atividades;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,7 +20,7 @@ import Modelo.AtividadeObj;
  * Created by oliveira on 04/06/17.
  */
 
-public class Tab_atividades extends Fragment {
+public class Tab_provas extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class Tab_atividades extends Fragment {
             List<AtividadeObj> atividades;
             AtividadeDAO pdao = new AtividadeDAO (getContext());
             pdao.open();
-            atividades = pdao.getAtividades();
+            atividades = pdao.getProvas();
 
             pdao.close();
             ListAdapter adapter = new ListaAdapter(getContext(),atividades);
@@ -38,5 +38,4 @@ public class Tab_atividades extends Fragment {
         }
         return rootView;
     }
-
 }

@@ -1,4 +1,4 @@
-package Atividades;
+package Tab_Atividades;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -88,13 +88,13 @@ public class Atividades extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Atividades.Tab_atividades tab_atividades = new Atividades.Tab_atividades();
+                    Tab_Atividades.Tab_atividades tab_atividades = new Tab_Atividades.Tab_atividades();
                     return tab_atividades;
                 case 1:
-                    Atividades.Tab_provas tab_provas = new Atividades.Tab_provas();
+                    Tab_Atividades.Tab_provas tab_provas = new Tab_Atividades.Tab_provas();
                     return tab_provas;
                 case 2:
-                    Atividades.Tab_Trabalhos tab_trabalhos = new Atividades.Tab_Trabalhos();
+                    Tab_Atividades.Tab_Trabalhos tab_trabalhos = new Tab_Atividades.Tab_Trabalhos();
                     return tab_trabalhos;
             }
             return null;

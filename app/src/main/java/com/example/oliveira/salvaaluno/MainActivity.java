@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import Atividades.Atividades;
+import Tab_Atividades.Atividades;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -14,6 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import Tab_Atividades.Tab_Trabalhos;
+import Tab_Atividades.Tab_atividades;
+import Tab_Atividades.Tab_provas;
+
 public class Professor extends AppCompatActivity {
 
 
