@@ -1,12 +1,16 @@
-package com.example.oliveira.salvaaluno;
+package DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import Modelo.AtividadeObj;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import Conect.BancoHelper;
 
 /**
  * Created by oliveira on 04/06/17.

@@ -7,6 +7,9 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import DAO.AtividadeDAO;
+import Modelo.AtividadeObj;
+
 public class Listagem extends AppCompatActivity {
     List<AtividadeObj> atividades;
     @Override

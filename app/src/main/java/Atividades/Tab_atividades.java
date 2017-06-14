@@ -1,4 +1,4 @@
-package com.example.oliveira.salvaaluno;
+package Atividades;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,13 +8,19 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.example.oliveira.salvaaluno.ListaAdapter;
+import com.example.oliveira.salvaaluno.R;
+
 import java.util.List;
+
+import DAO.AtividadeDAO;
+import Modelo.AtividadeObj;
 
 /**
  * Created by oliveira on 04/06/17.
  */
 
-public class Tab_provas extends Fragment {
+public class Tab_atividades extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -23,7 +29,7 @@ public class Tab_provas extends Fragment {
             List<AtividadeObj> atividades;
             AtividadeDAO pdao = new AtividadeDAO (getContext());
             pdao.open();
-            atividades = pdao.getProvas();
+            atividades = pdao.getAtividades();
 
             pdao.close();
             ListAdapter adapter = new ListaAdapter(getContext(),atividades);
@@ -32,4 +38,5 @@ public class Tab_provas extends Fragment {
         }
         return rootView;
     }
+
 }

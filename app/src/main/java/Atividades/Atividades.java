@@ -1,4 +1,4 @@
-package com.example.oliveira.salvaaluno;
+package Atividades;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -11,10 +11,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.oliveira.salvaaluno.CadastroAtividades;
+import com.example.oliveira.salvaaluno.R;
 
 public class Atividades extends AppCompatActivity {
 
@@ -86,13 +88,13 @@ public class Atividades extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab_atividades tab_atividades = new Tab_atividades();
+                    Atividades.Tab_atividades tab_atividades = new Atividades.Tab_atividades();
                     return tab_atividades;
                 case 1:
-                    Tab_provas tab_provas = new Tab_provas();
+                    Atividades.Tab_provas tab_provas = new Atividades.Tab_provas();
                     return tab_provas;
                 case 2:
-                    Tab_Trabalhos tab_trabalhos = new Tab_Trabalhos();
+                    Atividades.Tab_Trabalhos tab_trabalhos = new Atividades.Tab_Trabalhos();
                     return tab_trabalhos;
             }
             return null;

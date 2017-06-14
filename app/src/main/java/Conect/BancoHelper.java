@@ -1,4 +1,4 @@
-package com.example.oliveira.salvaaluno;
+package Conect;
 
 import android.content.Context;
 import android.database.DatabaseErrorHandler;

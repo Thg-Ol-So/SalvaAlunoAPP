@@ -1,4 +1,4 @@
-package com.example.oliveira.salvaaluno;
+package Modelo;
 
 /**
  * Created by oliveira on 04/06/17.

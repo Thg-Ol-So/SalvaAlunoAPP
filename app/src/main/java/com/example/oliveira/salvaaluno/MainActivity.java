@@ -5,11 +5,10 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+
+import Atividades.Atividades;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void View_atividades(View v){
-        Intent i = new Intent(MainActivity.this,Atividades.class);
+        Intent i = new Intent(MainActivity.this, Atividades.class);
         startActivity(i);
 
     }

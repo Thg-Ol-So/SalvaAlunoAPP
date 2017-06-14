@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import Modelo.AtividadeObj;
+
 /**
  * Created by oliveira on 04/04/17.
  */

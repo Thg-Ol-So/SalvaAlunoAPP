@@ -19,8 +19,11 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.LinkedList;
 import java.util.List;
+
+import Atividades.Atividades;
+import DAO.AtividadeDAO;
+import Modelo.AtividadeObj;
 
 public class CadastroAtividades extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, DialogInterface.OnCancelListener {
     private TextView texto_data;
