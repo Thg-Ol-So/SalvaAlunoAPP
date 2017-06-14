@@ -14,56 +14,67 @@
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:onClick="View_professor"
         android:text="professor"
-
         android:textSize="@dimen/mdtp_year_label_text_size"
         android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:onClick="View_disciplinas"
         android:text="Disciplinas"
         android:textSize="@dimen/mdtp_year_label_text_size"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:onClick="View_atividades"
         android:text="Atividades"
         android:textSize="@dimen/mdtp_year_label_text_size"
         android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:layout_marginTop="20dp"
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:onClick="View_horarios"
         android:text="Horario Aula"
         android:textSize="@dimen/mdtp_year_label_text_size"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:onClick="View_eventos"
         android:text="Eventos"
         android:textSize="@dimen/mdtp_year_label_text_size"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
 
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:onClick="View_lembretes"
         android:text="Lembretes"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:layout_marginTop="20dp"
         android:textSize="@dimen/mdtp_year_label_text_size"
         android:textStyle="bold"

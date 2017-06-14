@@ -19,6 +19,8 @@
         <activity android:name=".CadastroAtividades" />
         <activity android:name=".Listagem" />
         <activity android:name=".Informacao" />
+        <activity android:name="Tab_Professores.Listagem_Prof" />
+        <activity android:name="Tab_Professores.Tab_Professor" />
         <activity
             android:name="Tab_Atividades.Atividades"
             android:label="@string/title_activity_atividades"

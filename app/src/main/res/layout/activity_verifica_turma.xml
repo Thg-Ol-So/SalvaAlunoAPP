@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="#4444"
+    android:background="#007ffd"
     android:layout_margin="20dp"
     tools:context="com.example.oliveira.salvaaluno.VerificaTurma">
 
@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:text="Salva Aluno"
         android:textSize="40dp"
+        android:textColor="#fff"
         android:textStyle="bold"
         android:textAlignment="center"
         android:layout_marginBottom="40dp"
@@ -34,8 +35,10 @@
         />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Ver"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:textSize="30dp"
         android:onClick="visualizar"
         android:layout_marginTop="40dp"
