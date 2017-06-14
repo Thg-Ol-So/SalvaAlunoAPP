@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import DAO.TurmaDAO;
+import Modelo.Turmas;
+
 public class VerificaTurma extends AppCompatActivity {
     EditText turma;
     @Override
@@ -28,10 +31,24 @@ public class VerificaTurma extends AppCompatActivity {
     }
     public void visualizar(View v){
         String codigo = turma.getEditableText().toString();
-        SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);
-        dados.edit().putString("nome", codigo).apply();
-        Intent i = new Intent(VerificaTurma.this,MainActivity.class);
-        startActivity(i);
+        TurmaDAO dao = new TurmaDAO(this);
+        dao.open();
+        dao.criar(new Turmas("3212"));
+        dao.criar(new Turmas("3213"));
+        dao.criar(new Turmas("3214"));
+        dao.close();
+        try{
+            if(dao.getByIdTurma(codigo).getId()>0){
+                SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);
+                dados.edit().putString("nome", codigo).apply();
+                Intent i = new Intent(VerificaTurma.this,MainActivity.class);
+                startActivity(i);
+            }
+        }catch (Exception e){
+            Toast.makeText(this,"Codigo Invalido", Toast.LENGTH_LONG).show();
+        }finally {
+            dao.close();
+        }
         onResume();
 
     }

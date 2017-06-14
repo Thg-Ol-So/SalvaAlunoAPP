@@ -25,6 +25,8 @@ public class BancoHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table atividades(id integer primary key autoincrement, tipo text, data text, conteudo text);";
         db.execSQL(sql);
+        sql = "create table turmas(id integer primary key autoincrement, idTurma text);";
+        db.execSQL(sql);
     }
 
     @Override
