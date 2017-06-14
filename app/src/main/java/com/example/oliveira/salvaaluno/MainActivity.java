@@ -18,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);
+        if(getIntent().getBooleanExtra("SAIR", false)){
+            this.finish();
+
+            return ;
+        }
         if(dados.getString("nome","").isEmpty()){
             Intent i = new Intent(MainActivity.this,VerificaTurma.class);
             startActivity(i);
@@ -26,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+    @Override
+    protected void onResume() {
+        if(getIntent().getBooleanExtra("SAIR", false)){
+            this.finish();
+            System.exit(0);
+        }
+        super.onResume();
     }
 
     @Override

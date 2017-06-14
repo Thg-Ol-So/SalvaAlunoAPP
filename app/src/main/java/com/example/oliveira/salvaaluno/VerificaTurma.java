@@ -62,7 +62,10 @@ public class VerificaTurma extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.acao_sair) {
-            finish();
+            Intent  it = new Intent(getApplicationContext(), MainActivity.class);
+            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            it.putExtra("SAIR", true);
+            startActivity(it);
             toast("Aplicativo Encerrado");
         }
 
