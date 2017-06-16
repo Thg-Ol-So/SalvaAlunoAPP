@@ -3,6 +3,7 @@ package com.example.oliveira.salvaaluno;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,7 @@ import Modelo.Professor;
 
 public class VerificaTurma extends AppCompatActivity {
     EditText turma;
+    FloatingActionButton atualizar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +34,18 @@ public class VerificaTurma extends AppCompatActivity {
         SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);
         String id_turma = dados.getString("nome","");
     }
+
     public void visualizar(View v){
         String codigo = turma.getEditableText().toString();
+        //Professor_DAO pdao = new Professor_DAO(this);
+        //pdao.open();
+        //pdao.criar(new Professor("Gustavo","gustavo@ifms.com","999027276"));
+        //pdao.criar(new Professor("Tony","tony@ifms.com","999991411"));
+        //pdao.criar(new Professor("Gilson","gilson@ifms.com","999473362"));
         TurmaDAO dao = new TurmaDAO(this);
         dao.open();
+        //dao.criar(new Turmas("3212"));
+        //dao.close();
         try{
             if(dao.getByIdTurma(codigo).getId()>0){
                 SharedPreferences dados = PreferenceManager.getDefaultSharedPreferences(this);

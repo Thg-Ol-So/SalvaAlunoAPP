@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import Tab_Atividades.Atividades;
 import DAO.AtividadeDAO;
 import Modelo.AtividadeObj;
 
@@ -99,6 +98,7 @@ public class CadastroAtividades extends AppCompatActivity implements DatePickerD
             dao.criar(new AtividadeObj(tipo, data, conteudo));
             dao.close();
             Intent i = new Intent(CadastroAtividades.this, Atividades.class);
+            this.finish();
             startActivity(i);
         }
 

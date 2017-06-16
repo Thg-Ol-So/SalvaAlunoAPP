@@ -25,17 +25,7 @@ public class Tab_Disciplinas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_listagem, container, false);
-        if(rootView!=null){
-            List<AtividadeObj> atividades;
-            AtividadeDAO pdao = new AtividadeDAO (getContext());
-            pdao.open();
-            atividades = pdao.getProvas();
 
-            pdao.close();
-            ListAdapter adapter = new ListaAdapter(getContext(),atividades);
-            ListView lv = (ListView) rootView.findViewById(R.id.listagem);
-            lv.setAdapter(adapter);
-        }
         return rootView;
     }
 }

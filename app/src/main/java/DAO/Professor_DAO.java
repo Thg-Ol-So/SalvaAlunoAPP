@@ -59,6 +59,7 @@ public class Professor_DAO {
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             Professor p = new Professor(cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            p.setId(cursor.getInt(0));
             lista.add(p);
             cursor.moveToNext();
         }
